@@ -1,7 +1,11 @@
-_site/
-.sass-cache/
-.jekyll-metadata
-alembic-jekyll-theme-*.gem
-Gemfile.lock
-**/Gemfile.lock
+.*
+*.pyc
 
+# jekyll debug
+_site
+
+# Jeykll Gemfile.lock
+Gemfile.lock
+
+# yui-compressor
+*.jar

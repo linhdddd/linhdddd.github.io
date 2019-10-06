@@ -1,50 +1,44 @@
+---
+layout: compress
+# Default layout
+# © 2017-2019 Cotes Chung
+# MIT Licensed
+---
+
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en">
 
-  <head>
-    <!-- General meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include head.html %}
 
-    {% if page.indexing == false %}
-      <meta name="robots" content="noindex">
-    {% endif %}
+  <body data-spy="scroll" data-target="#toc">
+    <div id="sidebar" class="d-flex flex-column">
+      {% include sidebar.html %}
+    </div>
+    <div id="main-wrap">
+      {% include topbar.html %}
+      <div id="main">
+        <div class="row justify-content-center bg-white">
 
-    {% if page.collectionpage %}
-      {% seo title=false %}
+        {% capture _content %}
+          {{ content }}
+        {% endcapture %}
 
-      {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
-      <title>{{ collectiondata.title }} - {{ site.title }}</title>
-      <meta property="og:title" content="{{ collectiondata.title }}">
-      <meta name="description" content="{{ collectiondata.description }}">
-      <meta property="og:description" content="{{ collectiondata.description }}">
-    {% else %}
-      {% seo %}
-    {% endif %}
+        {% include fixlinenos.html %}
+        {{ _content }}
 
-    <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
-    <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>
+        </div>
+        {% include footer.html %}
+      </div>
+      {% include search-results.html %}
+    </div>
 
-    {% if site.css_inline == true %}
-      {% include site-styles.html %}
-    {% else %}
-      <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
-    {% endif %}
+    <div id="mask"></div>
 
-    {% if site.favicons or site.avatarurl %}{% include site-favicons.html %}{% endif %}
+    {% include search.html %}
 
-    {% if site.google_analytics %}{% include site-analytics.html %}{% endif %}
-
-    {% include site-before-start.html %}
-  </head>
-
-  <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
-    {% include site-icons.svg %}
-
-    {{ content }}
-
-    {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
-
-    {% include site-before-end.html %}
+    <a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
   </body>
 
 </html>

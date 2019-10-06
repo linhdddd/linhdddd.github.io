@@ -1,21 +1,29 @@
 ---
 layout: default
+# The page layout
+# © 2017-2019 Cotes Chung
+# MIT License
 ---
 
-{% include site-header.html %}
+<div class="col-12 col-lg-11 col-xl-8">
+  <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 pl-xl-3">
 
-<main class="main  container">
+  {% if page.dynamic_title %}
 
-  <article class="article  article--page  content  typeset">
+    <h1 class="dynamic-title">{{ page.title }}</h1>
+    <div class="post-content">
+      {{ content }}
+    </div>
 
-    <h1>{{ page.title }}</h1>
+  {% else %}
 
     {{ content }}
 
-  </article>
+  {% endif %}
 
-  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+  </div> <!-- #page -->
+</div><!-- end .col-12 -->
 
-</main>
-
-{% include site-footer.html %}
+<div id="panel-wrap" class="col-xl-3 pl-2">
+  {% include panel.html %}
+</div>
