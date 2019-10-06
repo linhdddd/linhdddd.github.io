@@ -18,17 +18,17 @@ author: Linhnt                          # change to your full name
 logo: /assets/img/sample/profile.jpg    # Support network resources.
 
 github:
-  username: github_username             # change to your github username
+  username: linhdddd             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: linhdddd           # change to your twitter username
 
 social:
   name: Chirpy                          # change to your full name
   email: example@doamin.com             # change to your email address
   links:
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://twitter.com/linhdddd    # change to your twitter homepage
+    - https://github.com/linhdddd      # change to your github homepage
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 

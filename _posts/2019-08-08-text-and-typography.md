@@ -1,11 +1,11 @@
 ---
-title: "Text and Typography"
-date: 2019-08-08 11:33:00 +0800
+title: "Tìm hiểu về IP Table - kỳ 1"
+date: 2019-10-06 22:00:00 +0800
 categories: [Blogging, Tutorial]
-tags: [typography]
+tags: [iptables]
 ---
 
-This Jekyll template totally compatible with Markdown syntax. Now, let's take a look for the text and typography in this theme.
+Loạt bài tìm hiểu về IPTable
 
 ## Titles
 
