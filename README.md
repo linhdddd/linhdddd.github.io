@@ -44,7 +44,7 @@ Boot your site locally:
 
 ```
 $ bash run.sh
-```
+```sss
 
 Now, open your favorite brower and visit <http://127.0.0.1:4000>
 
